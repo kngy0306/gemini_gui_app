@@ -1,0 +1,37 @@
+[project]
+name = "project-ray"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "kona", email = "kitami.kitano20@gmail.com" }
+]
+dependencies = [
+    "python-dotenv>=1.0.1",
+    "langchain>=0.2.3",
+    "langchain-community>=0.2.4",
+    "momento>=1.20.1",
+    "pygame>=2.5.2",
+    "google-cloud-texttospeech>=2.16.3",
+    "google-generativeai>=0.6.0",
+    "pillow>=10.3.0",
+    "flet>=0.22.1",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[tool.rye.scripts]
+app = "flet run chat-app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/project_ray"]
