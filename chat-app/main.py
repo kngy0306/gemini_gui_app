@@ -31,7 +31,7 @@ model = genai.GenerativeModel(
 pygame.mixer.init()
 client = texttospeech.TextToSpeechClient()
 voice = texttospeech.VoiceSelectionParams(
-    language_code="	ja-JP",
+    language_code="ja-JP",
     name="ja-JP-Standard-D",
     ssml_gender=texttospeech.SsmlVoiceGender.MALE,
 )
